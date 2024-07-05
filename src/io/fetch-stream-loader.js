@@ -138,6 +138,10 @@ class FetchStreamLoader extends BaseLoader {
                     }
                 }
 
+                if (this._config.onHeaders) {
+                    this._config.onHeaders(res.headers);
+                }
+
                 let lengthHeader = res.headers.get('Content-Length');
                 if (lengthHeader != null) {
                     this._contentLength = parseInt(lengthHeader);
