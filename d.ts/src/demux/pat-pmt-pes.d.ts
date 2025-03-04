@@ -16,6 +16,7 @@ export declare enum StreamType {
     kEAC3 = 135,
     kMetadata = 21,
     kSCTE35 = 134,
+    kPGS = 144,
     kH264 = 27,
     kH265 = 36
 }
@@ -30,6 +31,7 @@ export declare class PMT {
     common_pids: {
         h264: number | undefined;
         h265: number | undefined;
+        av1: number | undefined;
         adts_aac: number | undefined;
         loas_aac: number | undefined;
         opus: number | undefined;
@@ -42,6 +44,12 @@ export declare class PMT {
     };
     timed_id3_pids: {
         [pid: number]: boolean;
+    };
+    pgs_pids: {
+        [pid: number]: boolean;
+    };
+    pgs_langs: {
+        [pid: number]: string;
     };
     synchronous_klv_pids: {
         [pid: number]: boolean;

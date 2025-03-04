@@ -65,6 +65,7 @@ declare class TSDemuxer extends BaseDemuxer {
     private parsePAT;
     private parsePMT;
     private parseSCTE35;
+    private parseAV1Payload;
     private parseH264Payload;
     private parseH265Payload;
     private detectVideoMetadataChange;
@@ -84,6 +85,7 @@ declare class TSDemuxer extends BaseDemuxer {
     private dispatchPESPrivateDataDescriptor;
     private parsePESPrivateDataPayload;
     private parseTimedID3MetadataPayload;
+    private parsePGSPayload;
     private parseSynchronousKLVMetadataPayload;
     private parseAsynchronousKLVMetadataPayload;
     private parseSMPTE2038MetadataPayload;
